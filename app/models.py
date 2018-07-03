@@ -5,7 +5,7 @@ from .import db
 
 
 
-class User(UserMixin,db.Model):#class that will help us create new users then pass in db.model as an argument.This connects the class to the database and allow communication
+class User(db.Model):#class that will help us create new users then pass in db.model as an argument.This connects the class to the database and allow communication
    
     __tablename__ = 'users'#allows us to give the tables in our database proper names
    
@@ -14,7 +14,6 @@ class User(UserMixin,db.Model):#class that will help us create new users then pa
     email = db.Column(db.String(255),unique=True,index=True)
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
-    role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
     pass_secure = db.Column(db.String(255))
 
     @property # creates a write only class property password.
@@ -30,9 +29,11 @@ class User(UserMixin,db.Model):#class that will help us create new users then pa
     def verify_password(self,password):
             return check_password_hash(self.pass_secure,password)
         
-    @login_manager.user_loader
-    def load_user(user_id):
-            return User.query.get(int(user_id))
+   
+
+    def save_user(self):
+        db.session.add(self)
+        db.session.commit()
 
     def __repr__(self):
         return f'User {self.username}'
