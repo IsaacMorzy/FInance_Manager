@@ -13,6 +13,7 @@ def index():
     
     return render_template('index.html')
 
+
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()
@@ -21,6 +22,17 @@ def profile(uname):
         abort(404)
 
     return render_template("profile/profile.html", user = user)
+
+
+
+@main.route('/')
+def index():
+   
+
+    title = 'Home'
+    return render_template('index.html', title = title)
+
+
 
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
