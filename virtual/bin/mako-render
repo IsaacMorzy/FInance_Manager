@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 #!/home/isaac/Documents/PYTHON/flask/projects/FInance_Manager/virtual/bin/python3.6
 # EASY-INSTALL-ENTRY-SCRIPT: 'Mako==1.0.7','console_scripts','mako-render'
 __requires__ = 'Mako==1.0.7'
 import re
+=======
+#!/home/imma/Videos/FInance_Manager/virtual/bin/python3.6
+# EASY-INSTALL-ENTRY-SCRIPT: 'Mako==1.0.7','console_scripts','mako-render'
+__requires__ = 'Mako==1.0.7'
+>>>>>>> d6f1d5e162ab24ff2bbae41214684f7dea3134f6
 import sys
 from pkg_resources import load_entry_point
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+=======
+>>>>>>> d6f1d5e162ab24ff2bbae41214684f7dea3134f6
     sys.exit(
         load_entry_point('Mako==1.0.7', 'console_scripts', 'mako-render')()
     )
