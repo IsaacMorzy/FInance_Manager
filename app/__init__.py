@@ -1,5 +1,5 @@
 from flask import Flask
-<<<<<<< HEAD
+
 from config import config_options
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
@@ -47,7 +47,7 @@ def create_app(config_name):
 
     return app 
 
-=======
+
 from flask_bootstrap import Bootstrap
 from config import config_options
 from flask_sqlalchemy import SQLAlchemy
@@ -89,4 +89,4 @@ def create_app(config_name):
     # Will add the views and forms
 
     return app
->>>>>>> d6f1d5e162ab24ff2bbae41214684f7dea3134f6
+

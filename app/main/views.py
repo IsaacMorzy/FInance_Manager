@@ -1,6 +1,5 @@
-<<<<<<< HEAD
+
 from flask_login import login_required
-=======
 from flask_login import login_required
 from flask import render_template,request,redirect,url_for,abort
 from .forms import UpdateProfile
@@ -46,4 +45,4 @@ def update_pic(uname):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
->>>>>>> d6f1d5e162ab24ff2bbae41214684f7dea3134f6
+
