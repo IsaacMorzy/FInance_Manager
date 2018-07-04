@@ -5,6 +5,7 @@ from . import main
 from .. import db,photos
 
 
+
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()
@@ -19,12 +20,11 @@ def profile(uname):
 @main.route('/')
 def index():
    
-    category = Category.get_categories()
 
     title = 'Home'
-    return render_template('index.html', title = title, category = category)
+    return render_template('index.html', title = title)
 
-        
+
 
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
