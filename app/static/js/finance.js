@@ -164,3 +164,16 @@ var budgetController = (function () {
     };
 
 })();
+
+var UIcontroller = (function(){
+
+})();
+
+var controller = (function(budgetCtrl,UICtrl){
+   var z = budgetCtrl.publcTest(s);
+
+   return   {
+       anotherPublic:function
+   }
+
+})(budgetController,UIcontroller);
