@@ -1,0 +1,9 @@
+#title-home {
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lovers Quarrel';
+    font-size: 300px;
+    font-color:white;
+}
