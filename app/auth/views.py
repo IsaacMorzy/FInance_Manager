@@ -15,6 +15,8 @@ def login():
             return redirect(request.args.get('next') or url_for('main.index'))
             flash('invalid username or password')
 
+    
+
     title = "Pitch LogIn"
     return render_template('auth/login.html', login_form = login_form, title = title)
 
