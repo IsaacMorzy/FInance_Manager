@@ -45,5 +45,33 @@ class User(UserMixin,db.Model):#class that will help us create new users then pa
         return f'User {self.username}'
         #makes it easier to debug our apps
 
+class Budget(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    category = db.relationship('Category', backref='budget', uselist=False)
+    limit = db.Column(db.Integer)
 
+    def __repr__(self):
+        return '<Budget for {}>'.format(self.category)
+
+
+class Expense(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.Date)
+    description = db.Column(db.String(160))
+    cost = db.Column(db.Integer)
+    category_id = db.Column(db.Integer,db.ForeignKey('category.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __repr__(self):
+        return '<Purchase {}>'.format(self.description)
+
+
+class Category(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    category_text = db.Column(db.String(120), unique=True)
+    expenses = db.relationship('Expense', backref='category', lazy='dynamic')
+    budget_id = db.Column(db.Integer, db.ForeignKey('budget.id'))
+
+    def __repr__(self):
+        return '{}'.format(self.category_text.title())
 
