@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 #!/home/isaac/Documents/PYTHON/flask/projects/FInance_Manager/virtual/bin/python3.6
+=======
+<<<<<<< HEAD
+#!/home/grooviq/Desktop/FInance_Manager/virtual/bin/python3.6
+=======
+#!/home/imma/Videos/FInance_Manager/virtual/bin/python3.6
+>>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
 
 # -*- coding: utf-8 -*-
 import re
@@ -7,5 +15,13 @@ import sys
 from setuptools.command.easy_install import main
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+=======
+<<<<<<< HEAD
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+=======
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+>>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
     sys.exit(main())

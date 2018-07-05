@@ -3,6 +3,7 @@
 
 deactivate () {
     # reset old environment variables
+<<<<<<< HEAD
     if [ -n "$_OLD_VIRTUAL_PATH" ] ; then
         PATH="$_OLD_VIRTUAL_PATH"
         export PATH
@@ -10,6 +11,25 @@ deactivate () {
     fi
     if [ -n "$_OLD_VIRTUAL_PYTHONHOME" ] ; then
         PYTHONHOME="$_OLD_VIRTUAL_PYTHONHOME"
+=======
+<<<<<<< HEAD
+    if [ -n "$_OLD_VIRTUAL_PATH" ] ; then
+        PATH="$_OLD_VIRTUAL_PATH"
+        export PATH
+        unset _OLD_VIRTUAL_PATH
+    fi
+    if [ -n "$_OLD_VIRTUAL_PYTHONHOME" ] ; then
+        PYTHONHOME="$_OLD_VIRTUAL_PYTHONHOME"
+=======
+    if [ -n "${_OLD_VIRTUAL_PATH:-}" ] ; then
+        PATH="${_OLD_VIRTUAL_PATH:-}"
+        export PATH
+        unset _OLD_VIRTUAL_PATH
+    fi
+    if [ -n "${_OLD_VIRTUAL_PYTHONHOME:-}" ] ; then
+        PYTHONHOME="${_OLD_VIRTUAL_PYTHONHOME:-}"
+>>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
         export PYTHONHOME
         unset _OLD_VIRTUAL_PYTHONHOME
     fi
@@ -17,12 +37,30 @@ deactivate () {
     # This should detect bash and zsh, which have a hash command that must
     # be called to get it to forget past commands.  Without forgetting
     # past commands the $PATH changes we made may not be respected
+<<<<<<< HEAD
     if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
         hash -r
     fi
 
     if [ -n "$_OLD_VIRTUAL_PS1" ] ; then
         PS1="$_OLD_VIRTUAL_PS1"
+=======
+<<<<<<< HEAD
+    if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
+        hash -r
+    fi
+
+    if [ -n "$_OLD_VIRTUAL_PS1" ] ; then
+        PS1="$_OLD_VIRTUAL_PS1"
+=======
+    if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+        hash -r
+    fi
+
+    if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
+        PS1="${_OLD_VIRTUAL_PS1:-}"
+>>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
         export PS1
         unset _OLD_VIRTUAL_PS1
     fi
@@ -37,7 +75,15 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="/home/isaac/Documents/PYTHON/flask/projects/FInance_Manager/virtual"
+=======
+<<<<<<< HEAD
+VIRTUAL_ENV="/home/grooviq/Desktop/FInance_Manager/virtual"
+=======
+VIRTUAL_ENV="/home/imma/Videos/FInance_Manager/virtual"
+>>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -47,6 +93,11 @@ export PATH
 # unset PYTHONHOME if set
 # this will fail if PYTHONHOME is set to the empty string (which is bad anyway)
 # could use `if (set -u; : $PYTHONHOME) ;` in bash
+<<<<<<< HEAD
+if [ -n "$PYTHONHOME" ] ; then
+    _OLD_VIRTUAL_PYTHONHOME="$PYTHONHOME"
+=======
+<<<<<<< HEAD
 if [ -n "$PYTHONHOME" ] ; then
     _OLD_VIRTUAL_PYTHONHOME="$PYTHONHOME"
     unset PYTHONHOME
@@ -56,6 +107,22 @@ if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ] ; then
     _OLD_VIRTUAL_PS1="$PS1"
     if [ "x(virtual) " != x ] ; then
 	PS1="(virtual) $PS1"
+=======
+if [ -n "${PYTHONHOME:-}" ] ; then
+    _OLD_VIRTUAL_PYTHONHOME="${PYTHONHOME:-}"
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
+    unset PYTHONHOME
+fi
+
+if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ] ; then
+    _OLD_VIRTUAL_PS1="$PS1"
+    if [ "x(virtual) " != x ] ; then
+<<<<<<< HEAD
+	PS1="(virtual) $PS1"
+=======
+	PS1="(virtual) ${PS1:-}"
+>>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
     else
     if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
         # special case for Aspen magic directories
@@ -71,6 +138,14 @@ fi
 # This should detect bash and zsh, which have a hash command that must
 # be called to get it to forget past commands.  Without forgetting
 # past commands the $PATH changes we made may not be respected
+<<<<<<< HEAD
 if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
+=======
+<<<<<<< HEAD
+if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
+=======
+if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+>>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
     hash -r
 fi
