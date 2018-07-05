@@ -1,9 +1,17 @@
 
 from .import db
 from werkzeug.security import generate_password_hash,check_password_hash
+from .import login_manager
 from flask_login import UserMixin
 
-class User(db.Model):#class that will help us create new users then pass in db.model as an argument.This connects the class to the database and allow communication
+@login_manager.user_loader
+def load_user(user_id):
+    '''
+    @login_manager.user_loader Passes in a user_id to this function
+    Function queries the database and gets a user's id as a response
+    '''
+    return User.query.get(int(user_id))
+class User(UserMixin,db.Model):#class that will help us create new users then pass in db.model as an argument.This connects the class to the database and allow communication
    
     __tablename__ = 'users'#allows us to give the tables in our database proper names
    

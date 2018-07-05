@@ -1,11 +1,10 @@
-
-from flask_login import login_required
 from flask_login import login_required
 from flask import render_template,request,redirect,url_for,abort
 from .forms import UpdateProfile
 from . import main
 from .. import db,photos
-
+from ..models import User
+ 
 #Views
 @main.route('/')
 def index():

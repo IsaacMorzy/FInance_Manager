@@ -1,7 +1,30 @@
 
-{%extends 'bootstrap/base.html'%}
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block scripts %}
+  {{ super() }}
+  
+  <script src='{{url_for('static',filename='js/finance.js')}}'></script>
+  <script src='{{url_for('static',filename='js/jquery.js')}}'></script>
+  <script src='{{url_for('static',filename='js/bootstrap.bundle.min.js')}}'></script>
+  <script src='{{url_for('static',filename='js/jquery.easing.min.js')}}'></script>
 
-<!-- Navbar block  --> 
+  {% endblock %}
+
+
+
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/finance.css')}}">
+    
+    <link href="https://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type = "text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+<!-- Navbar block -->
 {% block navbar %}
+
     {% include 'navbar.html' %}
+    
 {% endblock %}
