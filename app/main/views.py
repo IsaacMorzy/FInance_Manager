@@ -3,7 +3,7 @@ from app import main
 
 # Views
 # Views
-@main.route('/')
+@mainz.route('/')
 def index():
 
     '''
