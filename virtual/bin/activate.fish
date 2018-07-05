@@ -29,7 +29,11 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV "/home/grooviq/Desktop/FInance_Manager/virtual"
+=======
+set -gx VIRTUAL_ENV "/home/imma/Videos/FInance_Manager/virtual"
+>>>>>>> origin/dev
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

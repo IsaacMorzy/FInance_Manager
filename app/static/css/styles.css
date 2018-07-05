@@ -1,0 +1,15 @@
+#title-home {
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lovers Quarrel';
+    font-size: 300px;
+    font-color:white;
+}
+.navbar {
+    background-color: rgb(31, 23, 51); 
+    color: rgb(185, 185, 185);
+    margin-bottom: 0%;
+    border-radius: 0%;
+}
