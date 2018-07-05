@@ -3,7 +3,8 @@ from flask import render_template,request,redirect,url_for,abort
 from .forms import UpdateProfile
 from . import main
 from .. import db,photos
-
+from ..models import User
+ 
 #Views
 @main.route('/')
 def index():
@@ -63,3 +64,4 @@ def update_pic(uname):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
+

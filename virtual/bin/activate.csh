@@ -9,10 +9,14 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 deactivate nondestructive
 
 <<<<<<< HEAD
+setenv VIRTUAL_ENV "/home/isaac/Documents/PYTHON/flask/projects/FInance_Manager/virtual"
+=======
+<<<<<<< HEAD
 setenv VIRTUAL_ENV "/home/grooviq/Desktop/FInance_Manager/virtual"
 =======
 setenv VIRTUAL_ENV "/home/imma/Videos/FInance_Manager/virtual"
 >>>>>>> origin/dev
+>>>>>>> 08a55bbf8b161e69ae2694a3b6caca076f135f84
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

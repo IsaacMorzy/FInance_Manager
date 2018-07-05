@@ -1,19 +1,30 @@
-{% extends 'bootstrap/base.html' %}
+
+{% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf %}
 
-{% block navabar %}
-    {% include 'navbar.html' %}
-{% endblock %}
-
+<!-- Content block -->
 {% block content %}
-<br>
-<br>
-<br>
-<br>
-<div class="col-md-2"></div>
-<div class="col-md-8">
-    {{wtf.quick_form(registration_form)}}
-</div>
-<div class="col-md-2"></div>
+    
+    <title> {{ title }} </title>
 
-{% endblock %}
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2 col-lg-2">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+
+                {{ wtf.quick_form(registration_form) }}
+
+            </div>
+
+            <div class="col-md-2 col-lg-2">
+                
+            </div>
+                
+        </div>
+
+    </div>
+{%endblock%}
